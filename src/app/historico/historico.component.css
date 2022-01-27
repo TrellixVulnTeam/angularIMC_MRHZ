@@ -1,0 +1,50 @@
+.container {
+  background-color: #0B0E20;
+  width: 50%;
+  text-align: center;
+}
+
+.radioButtonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.radioButtonContainer app-button-img {
+  background-color: #1D1E31;
+}
+
+.selected {
+  outline: 2px solid #1FE1BD;
+}
+
+.inputs {
+  background-color: #1D1E31;
+  margin: 1rem 0;
+  color: #1FE1BD;
+}
+
+.button {
+  background-color: #EC1455;
+  border: 2px solid #1FE1BD;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.msg {
+  color: #1FE1BD;
+  font-size: 1.5rem;
+}
+
+/*# sourceMappingURL=historico.component.css.map */

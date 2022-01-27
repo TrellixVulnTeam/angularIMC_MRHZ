@@ -1,0 +1,25 @@
+<form class="container">
+  <input type="text" name="nombre" class="form-control" placeholder="Escribe tu nombre" [(ngModel)]="this.historico.nombre">
+
+  <br>
+  <div class="radioButtonContainer">
+    <app-button-img [img]="'../../assets/masculino.png'" [text]="'Hombre'" (click)="this.historico.isMan = !this.historico.isMan" [class.selected]="this.historico.isMan"></app-button-img>
+
+    <app-button-img [img]="'../../assets/femenino.png'" [text]="'Mujer'" (click)="this.historico.isMan = !this.historico.isMan" [class.selected]="!this.historico.isMan"></app-button-img>
+  </div>
+
+  <div class="inputs">
+    <app-input-range class="card" [historico]="this.historico" [valueToRange]="this.historico.estatura" [medida]="'Centimetros'"></app-input-range>
+    <app-input-range class="card" [historico]="this.historico" [valueToRange]="this.historico.peso" [medida]="'Kilogramos'"></app-input-range>
+  </div>
+
+  <div>
+    <p class="msg" style="color: {{this.historico.color}};">{{this.historico.estado}}</p>
+  </div>
+  <div class="buttons">
+    <app-button-img [img]="'../../assets/cancel.png'" [text]="" (click)="clear()"></app-button-img>
+    <button class="button" (click)="calcularIMC()"> CALCULAR</button>
+    <app-button-img [img]="'../../assets/tick.jpeg'" [text]="" (click)="save()" ></app-button-img>
+  </div>
+
+</form>

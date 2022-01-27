@@ -1,0 +1,14 @@
+<div class="container">
+  <app-button-img [img]="'../../assets/resta.png'" [text]="" (click)="restar()"></app-button-img>
+  <div>
+    <p>
+      <span *ngIf="this.medida === 'Kilogramos' && this.historico !== undefined">{{this.historico.peso}}</span>
+      <span *ngIf="this.medida === 'Centimetros' && this.historico !== undefined">{{this.historico.estatura}}</span>
+      {{medida}}
+    </p>
+    <input *ngIf="this.medida === 'Kilogramos' && this.historico !== undefined" type="range" name="peso" max="300" [(ngModel)]="this.historico.peso">
+    <input *ngIf="this.medida === 'Centimetros'  && this.historico !== undefined" type="range" name="peso" max="300" [(ngModel)]="this.historico.estatura">
+  </div>
+  <app-button-img [img]="'../../assets/suma.png'" [text]="" (click)="sumar()"></app-button-img>
+</div>
+

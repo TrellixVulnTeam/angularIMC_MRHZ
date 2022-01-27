@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+app-button-img{
+  width: 5rem;
+  height: 10%;
+}
+
+input {
+  background: linear-gradient(to right, #1FE1BD 0%, #1FE1BD 30%, #fff 50%, #fff 100%);
+  border: solid 1px #82CFD0;
+  border-radius: 8px;
+  outline: none;
+  transition: background 450ms ease-in;
+  -webkit-appearance: none;
+}

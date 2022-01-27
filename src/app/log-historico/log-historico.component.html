@@ -1,0 +1,10 @@
+<div class="container">
+  <ul>
+    <li
+      *ngFor="let historico of historicos"
+    >
+      {{ historico.nombre }} <span style="color: {{historico.color}};"> {{ historico.estado }}</span>
+    </li>
+  </ul>
+  <app-historico></app-historico>
+</div>

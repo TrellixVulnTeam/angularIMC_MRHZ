@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.container ul {
+  width: 40%;
+  list-style: none;
+}
+
+.container app-historico {
+  width: 100%;
+}
