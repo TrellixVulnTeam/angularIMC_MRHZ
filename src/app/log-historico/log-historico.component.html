@@ -6,5 +6,5 @@
       {{ historico.nombre }} <span style="color: {{historico.color}};"> {{ historico.estado }}</span>
     </li>
   </ul>
-  <app-historico></app-historico>
+  <app-historico (historicoCreated)="onHeroCreated($event)"></app-historico>
 </div>

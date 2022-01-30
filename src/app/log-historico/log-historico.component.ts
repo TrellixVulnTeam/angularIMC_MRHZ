@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {HISTORICOS} from "../mock-histoico";
+import {Historico} from "../historico";
 
 @Component({
   selector: 'app-log-historico',
@@ -12,6 +13,22 @@ export class LogHistoricoComponent implements OnInit {
 
   public historicos = HISTORICOS;
   ngOnInit(): void {
+  }
+
+  public onHeroCreated(historico:Historico) {
+    console.log(historico);
+
+    var perico: Historico = {
+      nombre: '',
+      isMan: false,
+      estatura: 0,
+      peso: 0,
+      estado: '',
+      color: ''
+    };
+    Object.assign(perico, historico);;
+
+    this.historicos.push(perico);
   }
 
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import { Historico } from '../historico';
 import {HISTORICOS} from "../mock-histoico";
 //IMC
@@ -10,6 +10,7 @@ import {HISTORICOS} from "../mock-histoico";
 })
 export class HistoricoComponent implements OnInit {
 
+  @Output() historicoCreated: EventEmitter<Historico> = new EventEmitter();
 
   public historico: Historico = {
     nombre: '',
@@ -19,8 +20,6 @@ export class HistoricoComponent implements OnInit {
     estado: '',
     color: ''
   };
-
-  public historicos = HISTORICOS;
 
   constructor() { }
 
@@ -71,15 +70,9 @@ export class HistoricoComponent implements OnInit {
       return;
     }
     this.calcularIMC();
-    this.historicos.push(this.historico);
-    this.historico = {
-      nombre: '',
-      estatura: 0,
-      peso: 0,
-      isMan: true,
-      estado: '',
-      color: ''
-    };
+    this.historicoCreated.emit(this.historico);
+    //this.historicos.push(this.historico);
+
     this.clear();
   }
 }
