@@ -18,17 +18,7 @@ export class LogHistoricoComponent implements OnInit {
   public onHeroCreated(historico:Historico) {
     console.log(historico);
 
-    var perico: Historico = {
-      nombre: '',
-      isMan: false,
-      estatura: 0,
-      peso: 0,
-      estado: '',
-      color: ''
-    };
-    Object.assign(perico, historico);;
-
-    this.historicos.push(perico);
+    this.historicos.push({...historico});
   }
 
 }
