@@ -7,13 +7,10 @@ import {Historico} from "../historico";
   templateUrl: './log-historico.component.html',
   styleUrls: ['./log-historico.component.scss']
 })
-export class LogHistoricoComponent implements OnInit {
+export class LogHistoricoComponent {
 
-  constructor() { }
 
   public historicos = HISTORICOS;
-  ngOnInit(): void {
-  }
 
   public onHeroCreated(historico:Historico) {
     console.log(historico);

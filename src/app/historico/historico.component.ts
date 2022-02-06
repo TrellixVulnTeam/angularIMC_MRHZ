@@ -8,7 +8,7 @@ import {HISTORICOS} from "../mock-histoico";
   templateUrl: './historico.component.html',
   styleUrls: ['./historico.component.scss']
 })
-export class HistoricoComponent implements OnInit {
+export class HistoricoComponent {
 
   @Output() historicoCreated: EventEmitter<Historico> = new EventEmitter();
 
@@ -20,11 +20,6 @@ export class HistoricoComponent implements OnInit {
     estado: '',
     color: ''
   };
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
   public calcularIMC (): void {
     if (this.historico.peso === 0 || this.historico.estatura === 0 || this.historico.nombre === '') {

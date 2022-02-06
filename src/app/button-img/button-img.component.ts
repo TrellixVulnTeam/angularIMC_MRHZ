@@ -5,15 +5,11 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './button-img.component.html',
   styleUrls: ['./button-img.component.scss']
 })
-export class ButtonImgComponent implements OnInit {
+export class ButtonImgComponent{
 
   @Input() img?: string;
 
   @Input() text?: string;
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

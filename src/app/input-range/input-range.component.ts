@@ -6,16 +6,12 @@ import {Historico} from "../historico";
   templateUrl: './input-range.component.html',
   styleUrls: ['./input-range.component.scss']
 })
-export class InputRangeComponent implements OnInit {
+export class InputRangeComponent {
 
   @Input() public historico?: Historico;
   @Input() public valueToRange: number = 0;
 
   @Input() medida?: string;
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
   public restar(): void {
     if(this.historico !== undefined) {
